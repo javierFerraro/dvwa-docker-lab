@@ -39,7 +39,7 @@ env:
   CONTAINER_NAME: "dvwa-app"
   RESOURCE_GROUP: "USXSecOpsv2"
   CLUSTER_NAME: "AKS_Security"
-  DEPLOYMENT_MANIFEST_PATH: "k8s/deployment.yaml k8s/service.yaml"
+  DEPLOYMENT_MANIFEST_PATH: "k8s/*.yaml"
 
 jobs:
   buildImage:
