@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dvwa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dvwa
+  template:
+    metadata:
+      labels:
+        app: dvwa
+    spec:
+      containers:
+      - name: dvwa
+        image: ${{ secrets.AZURE_CONTAINER_REGISTRY }}.azurecr.io/dvwa-app:latest
+        ports:
+        - containerPort: 80
