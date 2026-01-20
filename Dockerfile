@@ -19,4 +19,3 @@ RUN chmod -R 777 /var/www/html
 COPY config.inc.php /var/www/html/config/config.inc.php
 
 EXPOSE 80
-``
