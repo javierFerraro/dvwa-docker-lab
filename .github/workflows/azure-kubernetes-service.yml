@@ -35,7 +35,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "akssecregistry"
+  AZURE_CONTAINER_REGISTRY: "githubregistryjfa"
   CONTAINER_NAME: "your-container-name"
   RESOURCE_GROUP: "USXSecOpsv2"
   CLUSTER_NAME: "AKS_Security"
