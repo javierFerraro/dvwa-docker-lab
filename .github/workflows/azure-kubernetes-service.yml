@@ -36,7 +36,7 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: "githubregistryjfa"
-  CONTAINER_NAME: "dvwa-app"
+  CONTAINER_NAME: "bwapp-app"
   RESOURCE_GROUP: "USXSecOpsv2"
   CLUSTER_NAME: "AKS_Security"
   DEPLOYMENT_MANIFEST_PATH: "k8s/*.yaml"
