@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dvwa
+  name: bwapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dvwa
+      app: bwapp
   template:
     metadata:
       labels:
-        app: dvwa
+        app: bwapp
     spec:
       containers:
-      - name: dvwa
+      - name: bwapp
         image: githubregistryjfa.azurecr.io/dvwa-app:latest
         ports:
         - containerPort: 80
