@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: bwapp
-        image: githubregistryjfa.azurecr.io/dvwa-app:latest
+        image: placeholder
         ports:
         - containerPort: 80
