@@ -8,7 +8,7 @@
 #   - https://learn.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli#configure-acr-integration-for-existing-aks-clusters
 #   - https://github.com/Azure/aks-create-action
 #
-# To configure this workflow:
+# To configure this workflow:f
 #
 # 1. Set the following secrets in your repository (instructions for getting these can be found at https://docs.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Clinux):
 #    - AZURE_CLIENT_ID
