@@ -1,0 +1,40 @@
+
+// Express handler (ejemplo)
+app.post("/calc", (req, res) => {
+  const expr = req.body.expr;      // input del usuario
+  const result = eval(expr);       // ❌ code injection
+  res.json({ result });
+});
+
+const { exec } = require("child_process");
+
+app.get("/ping", (req, res) => {
+  const host = req.query.host;
+  exec("ping -c 1 " + host, (err, out) => { // ❌ command injection
+    if (err) return res.status(500).send("error");
+    res.type("text").send(out);
+}
+
+       
+const { execFile } = require("child_process");
+
+app.get("/ping", (req, res) => {
+  const host = req.query.host;
+  execFile("ping", ["-c", "1", host], (err, out) => { // ✅ no concat
+    if (err) return res.status(500).send("error");
+    res.type("text").send(out);
+  });
+});
+
+
+app.get("/hello", (req, res) => {
+  const name = req.query.name; // input usuario
+  res.send(`<h1>Hola ${name}</h1>`); // ❌ XSS
+});
+
+
+<div id="out"></div>
+<script>
+  const q = new URLSearchParams(location.search).get("q");
+  document.getElementById("out").innerHTML = q; // ❌ XSS DOM
+</script>
